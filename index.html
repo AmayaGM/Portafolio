@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Case Study Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>ECOMORE: UI CASE STUDY</h1>
+        <p>Análisis de movilidad urbana y diseño de interfaz final.</p>
+    </header>
+
+    <main class="grid-container">
+        <section class="card" onclick="expandCard(this)">
+            <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
+            <div class="card-content">
+                <h3>CONTEXT / PROBLEM</h3>
+                <div class="placeholder-img">Imagen de tráfico</div>
+                <p>Descripción del problema de transporte urbano.</p>
+            </div>
+        </section>
+
+        <section class="card" onclick="expandCard(this)">
+            <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
+            <div class="card-content">
+                <h3>INTERVIEW</h3>
+                <blockquote>"El usuario real necesita una mejor ruta..."</blockquote>
+            </div>
+        </section>
+
+        <section class="card wide" onclick="expandCard(this)">
+            <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
+            <div class="card-content">
+                <h3>USER FLOW</h3>
+                <div class="placeholder-img">Diagrama de Flujo</div>
+            </div>
+        </section>
+
+        <section class="card" onclick="expandCard(this)">
+            <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
+            <div class="card-content">
+                <h3>DESIGN SYSTEM</h3>
+                <div class="colors">
+                    <span style="background:#00c2a8"></span>
+                    <span style="background:#5a4ad1"></span>
+                    <span style="background:#1a1a2e"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="card" onclick="expandCard(this)">
+            <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
+            <div class="card-content">
+                <h3>EXPECTED IMPACT</h3>
+                <div class="stats"><strong>+45%</strong> Eficiencia</div>
+            </div>
+        </section>
+    </main>
+
+    <div id="overlay" class="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
