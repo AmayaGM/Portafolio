@@ -181,13 +181,10 @@
 </section>
 
 
-        <!-- ============================================= -->
-<!-- TARJETA USER STORIES (MODIFICADA)             -->
-<!-- ============================================= -->
+        
 <section class="card story-card" onclick="expandCard(this)">
     <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
     
-    <!-- PARTE 1: Vista previa en el Dashboard -->
     <div class="card-preview">
         <div class="story-header">
             <span class="tag-accent">Requirements</span>
@@ -208,7 +205,6 @@
         <p class="story-description">Definición de funcionalidades desde la perspectiva del usuario.</p>
     </div>
 
-    <!-- PARTE 2: Contenido dentro del Modal (Vertical) -->
     <div class="card-details">
         <div class="modal-stories-container">
             
@@ -236,17 +232,74 @@
     </div>
 </section>
         
-        <section class="card" onclick="expandCard(this)">
-            <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
-            <div class="card-content">
-                <h3>DESIGN SYSTEM</h3>
-                <div class="colors">
-                    <span style="background:#00c2a8"></span>
-                    <span style="background:#5a4ad1"></span>
-                    <span style="background:#1a1a2e"></span>
-                </div>
+        <!-- ============================================= -->
+<!-- TARJETA DESIGN SYSTEM (MODIFICADA)            -->
+<!-- ============================================= -->
+<section class="card ds-card" onclick="expandCard(this)">
+    <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
+    
+    <!-- PARTE 1: Vista previa (Identidad Visual) -->
+    <div class="card-preview">
+        <div class="ds-header">
+            <span class="tag-accent">Atomic Design</span>
+            <h3>Design System</h3>
+        </div>
+        
+        <div class="ds-visual-preview">
+            <!-- Muestra de Colores (Basado en tu imagen de Primary/Secondary) -->
+            <div class="color-palette-mini">
+                <span class="color-circle" style="background:#fad402"></span>
+                <span class="color-circle" style="background:#c8aa02"></span>
+                <span class="color-circle" style="background:#1a1a2e"></span>
             </div>
-        </section>
+            <!-- Muestra de Tipografía (Basado en Lato) -->
+            <div class="font-preview">
+                <span class="font-lato">Lato Family</span>
+                <span class="font-spec">H1, H2, p, small</span>
+            </div>
+        </div>
+        <p class="ds-description">Guía de estilos, componentes interactivos y sistema de rejillas.</p>
+    </div>
+
+    <!-- PARTE 2: Contenido del Modal (Documentación Completa) -->
+    <div class="card-details">
+        <div class="modal-ds-container">
+            
+            <!-- Bloque 1: Tipografía y Rejilla -->
+            <div class="ds-block">
+                <h4><span class="status-dot green"></span> Typography & Grid System</h4>
+                <div class="ds-image-grid">
+                    <img src="img/typography-desktop.png" alt="Tipografía Desktop">
+                    <img src="img/grid-system.png" alt="Sistema de Rejillas">
+                </div>
+                <p class="caption">Escalado tipográfico para desktop/mobile y sistema de 12 columnas.</p>
+            </div>
+
+            <div class="persona-divider-horizontal"></div>
+
+            <!-- Bloque 2: Componentes Atómicos (Botones e Iconos) -->
+            <div class="ds-block">
+                <h4><span class="status-dot green"></span> UI Components (Buttons & Icons)</h4>
+                <div class="ds-image-wrapper">
+                    <img src="img/buttons-states.png" alt="Estados de Botones">
+                </div>
+                <p class="caption">Variaciones de tamaño (Small, Normal, Big) y estados (Hover, Active, Disabled).</p>
+            </div>
+
+            <div class="persona-divider-horizontal"></div>
+
+            <!-- Bloque 3: Organismos y Secciones Complejas -->
+            <div class="ds-block">
+                <h4><span class="status-dot green"></span> Sections & Complex Modules</h4>
+                <div class="ds-image-wrapper">
+                    <img src="img/sections-modules.png" alt="Módulos de la App">
+                </div>
+                <p class="caption">Estructura de Header, Footer, Mapas y Gráficos de rendimiento.</p>
+            </div>
+            
+        </div>
+    </div>
+</section>
 
         <section class="card wide" onclick="expandCard(this)">
             <button class="close-btn" onclick="closeCard(event, this)">&times;</button>

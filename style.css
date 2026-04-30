@@ -728,3 +728,75 @@ body {
 }
 
 /* Reutilizamos el divisor que ya definimos para las Personas */
+
+/* --- Vista Previa del Design System --- */
+.ds-visual-preview {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255,255,255,0.03);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.color-palette-mini {
+    display: flex;
+    gap: 8px;
+}
+
+.color-circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.1);
+}
+
+.font-preview {
+    display: flex;
+    flex-direction: column;
+}
+
+.font-lato {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.font-spec {
+    font-size: 0.75rem;
+    opacity: 0.6;
+}
+
+/* --- Modal del Design System --- */
+.modal-ds-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.ds-image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos imágenes lado a lado en PC */
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.ds-image-wrapper {
+    background: #ffffff10;
+    padding: 15px;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.ds-image-wrapper img, .ds-image-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+    .ds-image-grid {
+        grid-template-columns: 1fr; /* Una sola imagen en móvil */
+    }
+}
