@@ -112,10 +112,19 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80vw;
-    height: 80vh;
+    width: 95%;
+    max-width: 1000px;
+    height: 80vh; /* Altura máxima del 80% de la pantalla */
     z-index: 1000;
     cursor: default;
+    padding: 0 !important;
+    
+    /* CAMBIO CLAVE: Permite el scroll si el contenido es largo */
+    overflow-y: auto; 
+    
+    /* Opcional: mejora el scroll en navegadores modernos */
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--card-bg);
 }
 
 /* Botón cerrar oculto por defecto */
@@ -123,16 +132,31 @@ body {
     display: none;
     position: absolute;
     top: 15px;
-    right: 20px;
-    background: none;
+    right: 20px; /* Aquí lo mandamos a la derecha */
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro circular para que resalte */
     border: none;
     color: white;
-    font-size: 30px;
+    font-size: 24px;
+    font-weight: bold;
     cursor: pointer;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    line-height: 35px;
+    text-align: center;
+    z-index: 1010; /* Siempre por encima de todo */
+    transition: background 0.3s ease;
+}
+
+.close-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .card.active .close-btn {
     display: block;
+    position: absolute; /* O 'sticky' si quieres que te siga al bajar */
+    top: 20px;
+    right: 20px;
 }
 
 /* Fondo oscuro al expandir */
@@ -175,4 +199,107 @@ body {
     .wide {
         grid-column: span 2;
     }
+}
+
+
+/* Contenedor de la vista previa */
+.quote-card {
+    padding: 0 !important; /* Para que la imagen llegue a los bordes */
+    display: flex;
+    flex-direction: column;
+}
+
+.quote-image {
+    height: 180px; 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: height 0.3s ease; /* Para que el cambio sea suave */
+}
+
+/* Degradado oscuro sobre la imagen para que el texto resalte */
+.quote-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(transparent, rgba(26, 26, 46, 1));
+}
+
+.quote-content {
+    padding: 20px;
+}
+
+.gold-label {
+    color: #d4af37; /* Color dorado */
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.main-quote {
+    font-style: italic;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* --- LÓGICA DEL MODAL --- */
+
+/* Ocultar detalles en el grid */
+.card-details {
+    display: none;
+    padding: 20px;
+}
+
+/* Mostrar detalles y ajustar diseño cuando está activo */
+.card.active .card-details {
+    display: block;
+    padding: 30px; /* Un poco más de espacio para legibilidad */
+    height: auto;  /* Que crezca según el texto */
+}
+
+.card.active .quote-image {
+    width: 100%;       /* Ocupa todo el ancho del modal */
+    max-width: 100%;   /* Asegura que no se desborde */
+    height: 450px;     /* Altura mayor para el modal */
+    background-size: cover;     /* Cubre el área sin deformarse */
+    background-position: center; /* Centra el punto de interés de la foto */
+    margin: 0 auto;    /* Centrado clásico */
+}
+
+.card.active .card-preview {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.card.active .main-quote {
+    font-size: 1.8rem; /* Frase más grande en el modal */
+}
+
+/* Estilo de la lista de datos (2da foto) */
+.data-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.data-list li {
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #e0e0e0;
+}
+
+.data-list li strong {
+    color: #ffffff;
+    display: block; /* Pone el título arriba del texto */
+    margin-bottom: 2px;
 }
