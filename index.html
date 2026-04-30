@@ -180,22 +180,62 @@
     </div>
 </section>
 
-        <section class="card" onclick="expandCard(this)">
-            <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
-            <div class="card-content">
-                <h3>INTERVIEW</h3>
-                <blockquote>"El usuario real necesita una mejor ruta..."</blockquote>
-            </div>
-        </section>
 
-        <section class="card wide" onclick="expandCard(this)">
-            <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
-            <div class="card-content">
-                <h3>USER FLOW</h3>
-                <div class="placeholder-img">Diagrama de Flujo</div>
+        <!-- ============================================= -->
+<!-- TARJETA USER STORIES (MODIFICADA)             -->
+<!-- ============================================= -->
+<section class="card story-card" onclick="expandCard(this)">
+    <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
+    
+    <!-- PARTE 1: Vista previa en el Dashboard -->
+    <div class="card-preview">
+        <div class="story-header">
+            <span class="tag-accent">Requirements</span>
+            <h3>User Stories</h3>
+        </div>
+        
+        <!-- Representación visual de mini stories -->
+        <div class="mini-stories-container">
+            <div class="mini-story-item">
+                <div class="story-line short"></div>
+                <div class="story-line long"></div>
             </div>
-        </section>
+            <div class="mini-story-item">
+                <div class="story-line short"></div>
+                <div class="story-line long"></div>
+            </div>
+        </div>
+        <p class="story-description">Definición de funcionalidades desde la perspectiva del usuario.</p>
+    </div>
 
+    <!-- PARTE 2: Contenido dentro del Modal (Vertical) -->
+    <div class="card-details">
+        <div class="modal-stories-container">
+            
+            <!-- User Story 1 -->
+            <div class="story-block">
+                <h4><span class="status-dot green"></span> User Story #01: Registro Rápido</h4>
+                <div class="story-image-wrapper">
+                    <img src="img/paginaprincipal.png" alt="User Story 1" class="full-story-img">
+                </div>
+            </div>
+
+            <div class="persona-divider-horizontal"></div>
+
+            <!-- User Story 2 -->
+            <div class="story-block">
+                <h4><span class="status-dot green"></span> User Story #02: Gestión de Pagos</h4>
+                <div class="story-image-wrapper">
+                    <img src="img/paginaprincipal.png" alt="User Story 2" class="full-story-img">
+                </div>
+            </div>
+
+            <!-- Puedes seguir añadiendo bloques de story-block + divisor si tienes más -->
+            
+        </div>
+    </div>
+</section>
+        
         <section class="card" onclick="expandCard(this)">
             <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
             <div class="card-content">
@@ -205,6 +245,14 @@
                     <span style="background:#5a4ad1"></span>
                     <span style="background:#1a1a2e"></span>
                 </div>
+            </div>
+        </section>
+
+        <section class="card wide" onclick="expandCard(this)">
+            <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
+            <div class="card-content">
+                <h3>USER FLOW</h3>
+                <div class="placeholder-img">Diagrama de Flujo</div>
             </div>
         </section>
 

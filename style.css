@@ -650,3 +650,81 @@ body {
         max-width: 100%; /* Deja que ocupe el ancho de su columna */
     }
 }
+
+/* ============================================= */
+/* ESTILOS ESPECÍFICOS PARA USER STORIES         */
+/* ============================================= */
+
+/* --- Vista Previa --- */
+.story-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mini-stories-container {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mini-story-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 6px;
+    border-left: 3px solid var(--accent); /* Color verde de tu sistema */
+}
+
+.story-line {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    margin-bottom: 4px;
+}
+
+.story-line.short { width: 30%; }
+.story-line.long { width: 80%; margin-bottom: 0; }
+
+.story-description {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin-top: 10px;
+}
+
+/* --- Modal (Diseño Vertical) --- */
+.modal-stories-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.story-block {
+    width: 100%;
+    max-width: 850px; /* Un poco más ancho para leer mejor las tablas o texto de las stories */
+}
+
+.story-block h4 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    color: var(--text-light);
+}
+
+.story-image-wrapper {
+    background: #2a2a45;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.full-story-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Reutilizamos el divisor que ya definimos para las Personas */
