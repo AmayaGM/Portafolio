@@ -9,9 +9,17 @@
 <body>
 
     <header class="main-header">
-        <h1>ECOMORE: UI CASE STUDY</h1>
-        <p>Análisis de movilidad urbana y diseño de interfaz final.</p>
-    </header>
+    <div class="header-container">
+        <div class="header-mockup">
+            <!-- Aquí pones la ruta de tu imagen del celular -->
+            <img src="img/logo.png" alt="Ecomove App Mockup">
+        </div>
+        <div class="header-text">
+            <h1>ECOMOVE: UI CASE STUDY</h1>
+            <p>UI urban mobility improving commuting urban mobility to the final App design</p>
+        </div>
+    </div>
+</header>
 
     <main class="grid-container">
         <section class="card" onclick="expandCard(this)">
@@ -23,6 +31,14 @@
             </div>
         </section>
 
+        <section class="card" onclick="expandCard(this)">
+            <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
+            <div class="card-content">
+                <h3>INTERVIEW</h3>
+                <blockquote>"El usuario real necesita una mejor ruta..."</blockquote>
+            </div>
+        </section>
+        
         <section class="card" onclick="expandCard(this)">
             <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
             <div class="card-content">
