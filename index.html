@@ -111,13 +111,74 @@
     </div>
         </section>
 
-        <section class="card" onclick="expandCard(this)">
-            <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
-            <div class="card-content">
-                <h3>INTERVIEW</h3>
-                <blockquote>"El usuario real necesita una mejor ruta..."</blockquote>
+        <!-- ============================================= -->
+<!-- TARJETA USER PERSONA (MODIFICADA)             -->
+<!-- ============================================= -->
+<section class="card persona-card" onclick="expandCard(this)">
+    <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
+    
+    <!-- PARTE 1: Vista previa en el Dashboard (Grid) -->
+    <div class="card-preview">
+        <div class="persona-preview-header">
+            <span class="tag-accent">Research</span>
+            <h3>User Personas</h3>
+        </div>
+        
+        <!-- Diseño de vista previa: dos avatares y nombres -->
+        <div class="persona-ghost-container">
+            <div class="ghost-profile">
+                <div class="ghost-avatar">
+                    <!-- Puedes poner una mini imagen aquí o dejar el estilo CSS -->
+                    <img src="img/paginaprincipal.png" alt="Avatar 1">
+                </div>
+                <div class="ghost-info">
+                    <div class="ghost-name">Atleta Enfocado</div>
+                    <div class="ghost-tag">Primary</div>
+                </div>
             </div>
-        </section>
+            <div class="ghost-profile">
+                <div class="ghost-avatar">
+                    <img src="img/paginaprincipal.png" alt="Avatar 2">
+                </div>
+                <div class="ghost-info">
+                    <div class="ghost-name">Principiante</div>
+                    <div class="ghost-tag">Secondary</div>
+                </div>
+            </div>
+        </div>
+        <p class="persona-description">Perfiles detallados basados en entrevistas a usuarios reales.</p>
+    </div>
+
+    <!-- PARTE 2: Contenido dentro del Modal (Al expandir) -->
+    <div class="card-details">
+        <div class="modal-persona-container">
+            
+            <!-- Persona 1 -->
+            <div class="persona-block">
+                <h4><span class="status-dot green"></span> Persona Primaria: El Atleta Enfocado</h4>
+                <div class="persona-image-wrapper">
+                    <!-- CAMBIA ESTA RUTA POR TU PRIMERA IMAGEN -->
+                    <img src="img/paginaprincipal.png" alt="User Persona 1 Detalle" class="full-persona-img">
+                </div>
+                <p class="caption">Representa a usuarios experimentados que buscan eficiencia y seguimiento de datos.</p>
+            </div>
+
+            <!-- Divisor opcional (se oculta en móvil con CSS) -->
+            <div class="persona-divider"></div>
+
+            <!-- Persona 2 -->
+            <div class="persona-block">
+                <h4><span class="status-dot green"></span> Persona Secundaria: El Principiante</h4>
+                <div class="persona-image-wrapper">
+                    <!-- CAMBIA ESTA RUTA POR TU SEGUNDA IMAGEN -->
+                    <img src="img/paginaprincipal.png" alt="User Persona 2 Detalle" class="full-persona-img">
+                </div>
+                <p class="caption">Representa a nuevos miembros que necesitan guía, motivación y facilidad de uso.</p>
+            </div>
+            
+        </div>
+    </div>
+</section>
 
         <section class="card" onclick="expandCard(this)">
             <button class="close-btn" onclick="closeCard(event, this)">&times;</button>

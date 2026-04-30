@@ -511,3 +511,142 @@ body {
         margin: 0 20px;
     }
 }
+
+/* ============================================= */
+/* ESTILOS ESPECÍFICOS PARA USER PERSONA          */
+/* ============================================= */
+
+/* --- 1. Vista Previa (en el Grid) --- */
+
+.persona-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.persona-preview-header {
+    margin-bottom: 15px;
+}
+
+/* Contenedor de los perfiles "fantasma" */
+.persona-ghost-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 20px 0;
+    background: rgba(255,255,255,0.03);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.ghost-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ghost-avatar {
+    width: 40px;
+    height: 40px;
+    background: #2a2a45; /* Color de fondo por si no carga imagen */
+    border-radius: 50%;
+    overflow: hidden; /* Para que la imagen sea redonda */
+    border: 2px solid rgba(255,255,255,0.1);
+}
+
+.ghost-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen al círculo */
+}
+
+.ghost-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: white;
+}
+
+.ghost-tag {
+    font-size: 0.7rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.persona-description {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin: 0;
+}
+
+
+/* --- 2. Estilos del Modal (Abierto) --- */
+
+/* Contenedor principal dentro del modal */
+.modal-persona-container {
+    display: flex;
+    flex-direction: column; /* Por defecto (móvil), uno debajo del otro */
+    gap: 40px; /* Espacio entre bloques */
+    width: 100%;
+    padding-top: 20px;
+}
+
+.persona-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido en móvil */
+}
+
+.persona-block h4 {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    align-self: flex-start; /* Título a la izquierda */
+}
+
+/* Contenedor de la imagen completa */
+.persona-image-wrapper {
+    background: #2a2a45; /* Fondo oscuro */
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 450px; /* Evita que la imagen sea gigante en móvil */
+}
+
+.full-persona-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Divisor vertical (oculto en móvil) */
+.persona-divider {
+    display: none;
+}
+
+
+/* --- 3. Responsividad (Pantallas Grandes) --- */
+
+@media (min-width: 1000px) {
+    .modal-persona-container {
+        flex-direction: column; /* Uno al lado del otro */
+        align-items: flex-start;
+        gap: 0; /* Usamos el divisor para el espacio */
+    }
+
+    .persona-divider {
+        display: block;
+        width: 1px;
+        background: rgba(255,255,255,0.1);
+        align-self: stretch; /* Ocupa toda la altura */
+        margin: 0 30px; /* Espacio alrededor del divisor */
+    }
+
+    .persona-image-wrapper {
+        max-width: 100%; /* Deja que ocupe el ancho de su columna */
+    }
+}
