@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <header class="main-header">
+    <header class="main-header" onclick="openGoldenQuote()" style="cursor: pointer;">
     <div class="header-container">
         <div class="header-mockup">
             <!-- Aquí pones la ruta de tu imagen del celular -->
@@ -22,39 +22,95 @@
 </header>
 
     <main class="grid-container">
-        <section class="card quote-card" onclick="expandCard(this)">
+
+        <section class="card flow-card" onclick="expandCard(this)">
     <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
     
-    <!-- PARTE 1: Lo que se ve en el Dashboard -->
+    <!-- Vista previa en el Dashboard -->
     <div class="card-preview">
-        <div class="quote-image" style="background-image: url('img/recepcion.jpg');"></div>
-        <div class="quote-content">
-            <span class="gold-label">Golden Quote</span>
-            <p class="main-quote">“I feel like I lose too much time on paperwork when I could be helping customers.”</p>
+        <div class="flow-header">
+            <span class="tag-accent">Optimization</span>
+            <h3>Task Flow Analysis</h3>
+        </div>
+        <div class="comparison-preview">
+            <div class="mini-flow">
+                <span>Current</span>
+                <div class="dots">•••</div>
+            </div>
+            <div class="vs-circle">VS</div>
+            <div class="mini-flow active-flow">
+                <span>Actual</span>
+                <div class="dots">••</div>
+            </div>
+        </div>
+        <p class="flow-description">Reducción de pasos críticos en el proceso de registro.</p>
+    </div>
+
+    <!-- Contenido dentro del Modal -->
+    <div class="card-details" style="text-align: center;">
+        <p class="flow-description">Reducción de pasos críticos en el proceso de registro.</p>
+        <div class="modal-flow-container">
+            <div class="flow-section">
+                <h4><span class="status-dot red"></span> Current Task Flow (Legacy)</h4>
+                <div class="flow-image-container">
+                    <img src="img/paginaprincipal.png" alt="Current Task Flow">
+                </div>
+                <p class="caption">El proceso actual cuenta con 8 pasos y múltiples puntos de fricción.</p>
+            </div>
+
+            <div class="flow-divider"></div>
+
+            <div class="flow-section">
+                <h4><span class="status-dot green"></span> Proposed Task Flow (Actual)</h4>
+                <div class="flow-image-container">
+                    <img src="img/paginaprincipal.png" alt="Proposed Task Flow">
+                </div>
+                <p class="caption">Optimización a 4 pasos con validación automática de datos.</p>
+            </div>
+        </div>
+        <p class="flow-description">Reducción de pasos críticos en el proceso de registro.</p>
+        <div class="modal-flow-container">
+            <div class="flow-section">
+                <h4><span class="status-dot red"></span> Current Task Flow (Legacy)</h4>
+                <div class="flow-image-container">
+                    <img src="img/paginaprincipal.png" alt="Current Task Flow">
+                </div>
+                <p class="caption">El proceso actual cuenta con 8 pasos y múltiples puntos de fricción.</p>
+            </div>
+
+            <div class="flow-divider"></div>
+
+            <div class="flow-section">
+                <h4><span class="status-dot green"></span> Proposed Task Flow (Actual)</h4>
+                <div class="flow-image-container">
+                    <img src="img/paginaprincipal.png" alt="Proposed Task Flow">
+                </div>
+                <p class="caption">Optimización a 4 pasos con validación automática de datos.</p>
+            </div>
+        </div>
+        <p class="flow-description">Reducción de pasos críticos en el proceso de registro.</p>
+        <div class="modal-flow-container">
+            <div class="flow-section">
+                <h4><span class="status-dot red"></span> Current Task Flow (Legacy)</h4>
+                <div class="flow-image-container">
+                    <img src="img/paginaprincipal.png" alt="Current Task Flow">
+                </div>
+                <p class="caption">El proceso actual cuenta con 8 pasos y múltiples puntos de fricción.</p>
+            </div>
+
+            <div class="flow-divider"></div>
+
+            <div class="flow-section">
+                <h4><span class="status-dot green"></span> Proposed Task Flow (Actual)</h4>
+                <div class="flow-image-container">
+                    <img src="img/paginaprincipal.png" alt="Proposed Task Flow">
+                </div>
+                <p class="caption">Optimización a 4 pasos con validación automática de datos.</p>
+            </div>
         </div>
     </div>
-
-    <!-- PARTE 2: Lo que solo se ve al abrir el modal -->
-    <div class="card-details">
-        <h3>INSIGHTS & ANALYSIS</h3>
-        <ul class="data-list">
-            <li><strong>Double-Entry Redundancy:</strong> 100% operational redundancy from logbook + PC data entry.</li>
-            <li><strong>Registration Latency:</strong> 55-100 seconds per user, causing bottlenecks.</li>
-            <li><strong>Peak Hour Bottlenecks:</strong> Queues of up to 8 users during 6-9 PM, delaying 30% of entries.</li>
-            <li><strong>Administrative Burden:</strong> Staff spends 42 min/day (4.5 hrs/week) on manual transcription and data digitization.</li>
-            <li><strong>Financial Voucher Vulnerability:</strong> Increased risk of reconciliation errors and billing disputes from accumulated payments.</li>
-        </ul>
-    </div>
-</section>
-
-        <section class="card" onclick="expandCard(this)">
-            <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
-            <div class="card-content">
-                <h3>INTERVIEW</h3>
-                <blockquote>"El usuario real necesita una mejor ruta..."</blockquote>
-            </div>
         </section>
-        
+
         <section class="card" onclick="expandCard(this)">
             <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
             <div class="card-content">
@@ -99,6 +155,31 @@
             </div>
         </section>
     </main>
+
+<section id="golden-quote-hidden" class="card quote-card" >
+    <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
+    
+    <!-- PARTE 1: Lo que se ve en el Dashboard -->
+    <div class="card-preview">
+        <div class="quote-image" style="background-image: url('img/recepcion.jpg');"></div>
+        <div class="quote-content">
+            <span class="gold-label">Golden Quote</span>
+            <p class="main-quote">“I feel like I lose too much time on paperwork when I could be helping customers.”</p>
+        </div>
+    </div>
+
+    <!-- PARTE 2: Lo que solo se ve al abrir el modal -->
+    <div class="card-details">
+        <h3>INSIGHTS & ANALYSIS</h3>
+        <ul class="data-list">
+            <li><strong>Double-Entry Redundancy:</strong> 100% operational redundancy from logbook + PC data entry.</li>
+            <li><strong>Registration Latency:</strong> 55-100 seconds per user, causing bottlenecks.</li>
+            <li><strong>Peak Hour Bottlenecks:</strong> Queues of up to 8 users during 6-9 PM, delaying 30% of entries.</li>
+            <li><strong>Administrative Burden:</strong> Staff spends 42 min/day (4.5 hrs/week) on manual transcription and data digitization.</li>
+            <li><strong>Financial Voucher Vulnerability:</strong> Increased risk of reconciliation errors and billing disputes from accumulated payments.</li>
+        </ul>
+    </div>
+</section>
 
     <div id="overlay" class="overlay"></div>
 

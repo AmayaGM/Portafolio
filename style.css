@@ -20,8 +20,14 @@ body {
     /* Reducimos el padding vertical de 60px a 30px */
     padding: 30px 20px;
     color: white;
+    cursor: pointer;
     margin-bottom: 20px; /* Reducimos el margen inferior */
     border-radius: 0 0 15px 15px; /* Reducimos la curva */
+}
+
+.main-header:hover {
+    background-color: #1e2c3a;
+    transition: background 0.3s ease;
 }
 
 /* --- Ajuste del contenedor --- */
@@ -50,6 +56,10 @@ body {
     font-weight: 800;
     margin: 0;
     letter-spacing: -0.5px; /* Ajuste leve del espaciado */
+}
+.header-text h1:hover {
+    color: var(--accent); /* Cambia al color verde que ya usas */
+    transition: color 0.3s ease;
 }
 
 .header-text p {
@@ -195,12 +205,24 @@ body {
 }
 
 /* Responsividad para la tarjeta ancha en pantallas grandes */
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    }
+    
+    /* Si tienes la clase .wide, asegúrate de que no rompa la primera fila */
     .wide {
         grid-column: span 2;
     }
 }
 
+#golden-quote-hidden {
+    display: none;
+}
+
+#golden-quote-hidden.active {
+    display: block !important;
+}
 
 /* Contenedor de la vista previa */
 .quote-card {
@@ -273,13 +295,22 @@ body {
 }
 
 .card.active .card-preview {
+    display: block; /* Cambiamos de flex a block para que respete el flujo original */
+    padding: 30px;  /* Espaciado interno consistente */
+   border-bottom: 1px solid rgba(255,255,255,0.1);
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra el contenido horizontalmente */
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    box-sizing: border-box;
+}
+.card.active .comparison-preview {
+    max-width: 400px; /* Ajusta este ancho a tu gusto */
+    margin: 20px 0;   /* Mantiene el margen arriba/abajo pero no lo centra */
 }
 
+/* Estilo específico para los títulos dentro de la vista previa del modal */
+.card.active .flow-header h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
 .card.active .main-quote {
     font-size: 1.8rem; /* Frase más grande en el modal */
 }
@@ -302,4 +333,181 @@ body {
     color: #ffffff;
     display: block; /* Pone el título arriba del texto */
     margin-bottom: 2px;
+}
+
+/* Estilos de la Vista Previa */
+.flow-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tag-accent {
+    background: var(--accent);
+    color: #1a1a2e;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.comparison-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas para las imágenes */
+    gap: 20px;
+    width: 100%;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.1); /* Línea sutil para separar */
+}
+
+.comparison-preview {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0;
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.vs-circle {
+    background: #444;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.mini-flow span {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.active-flow span {
+    color: var(--accent);
+    opacity: 1;
+}
+
+/* Estilos del Contenido en el Modal */
+.modal-flow-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 60px; /* Espacio generoso entre el bloque 1, 2 y 3 */
+    width: 100%;
+}
+
+.vertical-arrow {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--accent);
+    margin: -10px 0;
+    font-weight: bold;
+}
+
+.modal-flow-container.vertical-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra las imágenes */
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.flow-section h4 {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-divider {
+    width: 100%;
+    border: none;
+    border-top: 2px dashed rgba(255,255,255,0.1);
+    margin: 40px 0;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.red { background: #ff4d4d; }
+.green { background: #00c2a8; }
+
+.flow-image-container {
+    background: #2a2a45; /* Fondo oscuro para que resalten tus capturas */
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 10px;
+    width: 100%;
+}
+
+.flow-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+.caption {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #bbb;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .comparison-row {
+        grid-template-columns: 1fr; /* Una sola columna en móvil */
+    }
+}
+
+/* Responsividad para el Modal (Lado a lado en pantallas grandes) */
+@media (min-width: 1000px) {
+    .modal-flow-container {
+        flex-direction: row; /* Pone los flujos uno al lado del otro */
+        align-items: flex-start;
+    }
+    .flow-section {
+        flex: 1;
+    }
+    .flow-divider {
+        width: 1px;
+        background: rgba(255,255,255,0.1);
+        align-self: stretch;
+    }
+}
+
+.comparison-block {
+    width: 100%;
+    max-width: 800px; /* Evita que las imágenes se estiren demasiado en PC */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@media (min-width: 800px) {
+    .comparison-row {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .flow-section {
+        flex: 1;
+    }
+
+    .flow-divider {
+        width: 2px;
+        background: rgba(255,255,255,0.1);
+        align-self: stretch;
+        margin: 0 20px;
+    }
 }
