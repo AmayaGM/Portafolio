@@ -19,6 +19,7 @@ body {
     background-size: cover;
     /* Reducimos el padding vertical de 60px a 30px */
     padding: 30px 20px;
+    margin: 50px 0px;
     color: white;
     cursor: pointer;
     margin-bottom: 20px; /* Reducimos el margen inferior */
@@ -1134,3 +1135,42 @@ body {
     }
 }
 
+/* Selector de Idiomas en la parte superior derecha */
+.language-selector {
+    position: fixed;   /* Se mantiene fijo al mover el scroll */
+    top: 25px;         /* Bajamos un poco para que no pegue al techo */
+    right: 25px;        /* Lo separamos del borde derecho */
+    display: flex;
+    gap: 0;            /* Quitamos el espacio para unirlos como una sola pieza */
+    z-index: 10000;    /* Máxima prioridad */
+    border-radius: 8px;
+    overflow: hidden;   /* Para que el radio del borde afecte a los botones */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Sombra para dar profundidad */
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.lang-btn {
+    background: #1a1a2e; /* Fondo oscuro sólido para que resalte */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif; /* O la que uses */
+    font-size: 11px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Botón izquierdo (ES) */
+#btn-es {
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.lang-btn.active {
+    background: #00c2a8; /* Tu color verde */
+    color: #1a1a2e;
+}
+
+.lang-btn:hover:not(.active) {
+    background: #2a2a4e;
+}

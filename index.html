@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="language-selector">
+    <button onclick="setLanguage('es')" id="btn-es" class="lang-btn active">ES</button>
+    <button onclick="setLanguage('en')" id="btn-en" class="lang-btn">EN</button>
+</div>
+
     <header class="main-header" onclick="openGoldenQuote()" style="cursor: pointer;">
     <div class="header-container">
         <div class="header-mockup">
@@ -14,9 +19,15 @@
             <img src="img/paginaprincipal.png" alt="Power Gym App Mockup">
         </div>
         <div class="header-text">
-            <h1>POWER GYM: UI CASE STUDY</h1>
-            <p>UI urban mobility improving commuting urban mobility to the final App design</p>
-        </div>
+            <h1 data-es="POWER GYM: ESTUDIO DE CASO UI" 
+        data-en="POWER GYM: UI CASE STUDY">
+        POWER GYM: UI CASE STUDY
+    </h1>
+<p data-es="Mejorando la movilidad urbana a través del diseño final de la App" 
+       data-en="UI urban mobility improving commuting urban mobility to the final App design">
+       UI urban mobility improving commuting urban mobility to the final App design
+    </p>            
+</div>
     </div>
 </header>
     <main class="grid-container">

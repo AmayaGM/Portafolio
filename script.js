@@ -44,3 +44,32 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeActiveCard();
 });
 
+function setLanguage(lang) {
+    // 1. Cambiar estado visual de los botones
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+    document.getElementById(`btn-${lang}`).classList.add('active');
+
+    // 2. Cambiar todos los textos con atributos data-en/data-es
+    const elements = document.querySelectorAll('[data-en]');
+    
+    elements.forEach(el => {
+        // Cambiar Texto
+        if (el.tagName !== 'IMG') {
+            el.textContent = el.getAttribute(`data-${lang}`);
+        } 
+        // Cambiar Imágenes (si tienen el atributo definido)
+        else {
+            const newSrc = el.getAttribute(`data-${lang}`);
+            if (newSrc) el.src = newSrc;
+        }
+    });
+
+    // Opcional: Guardar preferencia en el navegador
+    localStorage.setItem('preferredLang', lang);
+}
+
+// Al cargar la página, verificar si hay un idioma guardado
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('preferredLang') || 'es';
+    setLanguage(savedLang);
+});
