@@ -301,13 +301,63 @@
     </div>
 </section>
 
-        <section class="card wide" onclick="expandCard(this)">
-            <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
-            <div class="card-content">
-                <h3>USER FLOW</h3>
-                <div class="placeholder-img">Diagrama de Flujo</div>
+        <!-- ============================================= -->
+<!-- TARJETA PROTOTYPE (REEMPLAZA USER FLOW)       -->
+<!-- ============================================= -->
+<section class="card prototype-card" onclick="expandCard(this)">
+    <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
+    
+    <!-- PARTE 1: Vista previa (Desktop & Mobile) -->
+    <div class="card-preview">
+        <div class="ds-header">
+            <span class="tag-accent">Interactive</span>
+            <h3>High-Fidelity Prototype</h3>
+        </div>
+        
+        <div class="prototype-preview-container">
+            <!-- Representación visual de Desktop -->
+            <div class="preview-device desktop-view">
+                <div class="device-screen">
+                    <img src="img/prototype-desktop-snap.png" alt="Desktop Preview">
+                </div>
             </div>
-        </section>
+            <!-- Representación visual de Mobile -->
+            <div class="preview-device mobile-view">
+                <div class="device-screen">
+                    <img src="img/prototype-mobile-snap.png" alt="Mobile Preview">
+                </div>
+            </div>
+        </div>
+        <p class="ds-description">Prototipos interactivos vinculados directamente desde Figma.</p>
+    </div>
+
+    <!-- PARTE 2: Contenido del Modal (Figma Embeds) -->
+    <div class="card-details">
+        <div class="modal-prototype-container">
+            
+    <!-- Bloque Desktop -->
+    <div class="proto-block desktop-proto">
+        <h4>Desktop Experience</h4>
+        <div class="iframe-wrapper">
+            <iframe src="https://embed.figma.com/proto/ivTYbFZ55NKG0lSTbBZyms/Design-System-de-Essentia-Verde--Community-?node-id=88-373&p=f&scaling=scale-down-width&content-scaling=fixed&page-id=88%3A372&embed-host=share" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Bloque Mobile -->
+    <div class="proto-block mobile-proto">
+    <h4>Mobile App</h4>
+    <div class="iframe-wrapper">
+        <!-- Se cambió 'scaling=scale-down' por 'scaling=scale-down-width' y se añadió 'hide-footer=1' -->
+        <iframe 
+            src="https://embed.figma.com/proto/ivTYbFZ55NKG0lSTbBZyms/Design-System-de-Essentia-Verde--Community-?node-id=98-5051&p=f&scaling=scale-down-width&content-scaling=fixed&page-id=98%3A5050&starting-point-node-id=98%3A5051&embed-host=share&hide-footer=1" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</div>
+            
+</div>
+    </div>
+</section>
 
         <section class="card" onclick="expandCard(this)">
             <button class="close-btn" onclick="closeCard(event, this)">&times;</button>

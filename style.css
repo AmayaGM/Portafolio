@@ -800,3 +800,138 @@ body {
         grid-template-columns: 1fr; /* Una sola imagen en móvil */
     }
 }
+
+/* --- Contenedor de Vista Previa --- */
+.prototype-preview-container {
+    position: relative;
+    height: 180px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.preview-device {
+    background: #333;
+    border-radius: 8px;
+    border: 4px solid #1a1a1a;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.desktop-view {
+    width: 220px;
+    height: 140px;
+    z-index: 1;
+}
+
+.mobile-view {
+    width: 60px;
+    height: 120px;
+    position: absolute;
+    right: 20%;
+    bottom: -10px;
+    z-index: 2;
+    border-radius: 12px;
+}
+
+.device-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- Contenedor del Modal (Iframes) --- */
+.modal-prototype-container {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: stretch para que ocupen todo el ancho disponible */
+    justify-content: stretch; 
+    align-items: flex-start;
+    width: 100%;
+    gap: 30px; /* Único espacio real entre los dos bloques */
+    padding: 0; /* Eliminamos rellenos laterales del contenedor padre */
+}
+
+/* Quitamos cualquier fondo oscuro que pueda quedar */
+.iframe-wrapper {
+    background: transparent !important;
+    box-shadow: none; /* Opcional: quita la sombra si quieres un look más plano */
+}
+
+.proto-block {
+    display: flex;
+    flex-direction: column;
+    /* Quitamos cualquier margin-left o right: auto que esté centrando el bloque */
+    margin: 0; 
+}
+
+/* Basado en tus medidas 1440 y 430 */
+.desktop-proto {
+    flex: 3.3; /* Proporción mayor para Desktop */
+}
+
+.mobile-proto {
+   flex: 0 0 430px; /* No crece ni se encoge, se queda en 430px exactos */
+    max-width: 30%;
+}
+
+.iframe-wrapper iframe {
+    width: 100% !important;
+    height: 500px; /* Ajusta este alto según veas que se corta tu diseño */
+    border: none;
+    background: transparent !important;
+}
+/* Ajuste específico para el iframe de Mobile */
+.mobile-iframe {
+    max-width: 380px;    /* El prototipo móvil no necesita ser tan ancho como el de PC */
+    margin: 0 auto;      /* Lo centra dentro de su bloque */
+}
+
+/* Ajuste opcional para centrar el móvil si queda muy ancho */
+.mobile-iframe iframe {
+    max-width: 450px; 
+    margin: 0 auto;
+    display: block;
+}
+
+/* Esto hace que la tarjeta ocupe dos columnas en el grid */
+.prototype-card {
+    grid-column: span 2; /* Ocupa el espacio de 2 tarjetas */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Ajuste para que la previsualización se vea mejor en la tarjeta ancha */
+.prototype-card .prototype-preview-container {
+    height: 220px; /* Un poco más alta para aprovechar el espacio */
+    gap: 40px;     /* Separamos un poco más los dispositivos */
+}
+
+/* Media Query: En móviles vuelve a ocupar solo una columna */
+@media (max-width: 768px) {
+    .prototype-card {
+        grid-column: span 1;
+    }
+}
+@media (max-width: 1024px) {
+    .modal-prototype-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .proto-block {
+        width: 100%;
+    }
+}
+
+@media (max-width: 850px) {
+    .modal-prototype-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .desktop-proto, .mobile-proto {
+        width: 100%;
+    }
+}
