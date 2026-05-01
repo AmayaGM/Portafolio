@@ -3,10 +3,10 @@
     --card-bg: #1a1a2e;
     --text-light: #ffffff;
     --accent: #00c2a8;
+    font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
     background-color: var(--bg-color);
     margin: 0;
     padding: 20px;
@@ -97,6 +97,26 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     align-items: stretch; /* Asegura que las tarjetas se estiren verticalmente */
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 10px 0;
+    color: var(--text-light);
+}
+
+/* Subtítulos dentro de los modales o bloques */
+.card h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent); /* Color uniforme para subtítulos */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
 }
 
 /* Estilo de las Tarjetas */
@@ -328,6 +348,11 @@ body {
 .ds-description {
     margin-top: auto; /* Empuja el texto hacia la parte inferior de la tarjeta */
     padding-top: 15px;
+    font-size: 0.85rem;
+    font-weight: 400;
+    line-height: 1.4;
+    opacity: 0.8;
+    color: #e0e0e0;
 }
 
 .card.active .card-preview {
@@ -383,9 +408,10 @@ body {
     color: #1a1a2e;
     font-size: 0.7rem;
     font-weight: bold;
-    padding: 4px 8px;
+    padding: 4px 10px;
     border-radius: 4px;
     text-transform: uppercase;
+    display: inline-block;
 }
 
 .comparison-row {
@@ -470,9 +496,10 @@ body {
 }
 
 .status-dot {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
+    flex-shrink: 0; /* Evita que el punto se deforme si el texto es largo */
 }
 .red { background: #ff4d4d; }
 .green { background: #00c2a8; }
@@ -494,10 +521,11 @@ body {
 }
 
 .caption {
-    font-size: 0.9rem;
-    margin-top: 10px;
+    font-size: 0.8rem;
     color: #bbb;
-    font-style: italic;
+    margin-top: 8px;
+    text-align: center;
+    display: block;
 }
 
 @media (max-width: 768px) {
@@ -1105,3 +1133,4 @@ body {
         grid-template-columns: 1fr;
     }
 }
+

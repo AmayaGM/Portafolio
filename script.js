@@ -43,3 +43,4 @@ overlay.addEventListener('click', closeActiveCard);
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeActiveCard();
 });
+
