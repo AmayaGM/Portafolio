@@ -359,6 +359,69 @@
     </div>
 </section>
 
+<!-- ============================================= -->
+<!-- TARJETA RESULTS & METRICS (FULL WIDTH)        -->
+<!-- ============================================= -->
+<section class="card results-card full-wide" onclick="expandCard(this)">
+    <button class="close-btn" onclick="closeCard(event, this)" aria-label="Cerrar detalle">&times;</button>
+    
+    <!-- PARTE 1: Vista previa en el Dashboard -->
+    <div class="card-preview results-preview-layout">
+        <!-- Lado Izquierdo: SUS Score -->
+        <div class="sus-container">
+            <span class="tag-accent">Validation</span>
+            <div class="sus-circle-result">
+                <span class="sus-value">85%</span>
+                <span class="sus-label">SUS Score</span>
+            </div>
+        </div>
+
+        <!-- Lado Derecho: Objetivos y Sugerencias -->
+        <div class="summary-details">
+            <div class="summary-box goals-box">
+                <h4><span class="status-dot green"></span> Objetivos Cumplidos</h4>
+                <p>Digitalización del 100% de registros y reducción de tiempos de espera.</p>
+            </div>
+            <div class="summary-box suggestions-box">
+                <h4><span class="status-dot green"></span> Sugerencias</h4>
+                <p>Implementar módulos de nutrición y pagos recurrentes automáticos.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PARTE 2: Contenido dentro del Modal (Detallado) -->
+    <div class="card-details">
+        <div class="modal-results-detailed">
+            <div class="results-header-detailed">
+                <h3>System Usability Scale (SUS) Analysis</h3>
+                <p>El prototipo obtuvo una calificación de <strong>85/100</strong>, situándose en el rango de "Excelente".</p>
+            </div>
+            
+            <div class="detailed-grid">
+                <!-- Columna Objetivos -->
+                <div class="detailed-section">
+                    <h4>Objetivos de Negocio Logrados</h4>
+                    <ul class="check-list">
+                        <li><strong>Eficiencia Operativa:</strong> Reducción del tiempo de registro manual (de 100s a menos de 20s).</li>
+                        <li><strong>Cero Papelería:</strong> Digitalización total de vouchers y contratos.</li>
+                        <li><strong>Control de Aforo:</strong> Monitoreo en tiempo real de usuarios en el gimnasio.</li>
+                    </ul>
+                </div>
+
+                <!-- Columna Sugerencias -->
+                <div class="detailed-section">
+                    <h4>Sugerencias Estratégicas</h4>
+                    <ul class="check-list">
+                        <li><strong>Escalabilidad:</strong> Integrar una API de pasarela de pagos para cobros automáticos.</li>
+                        <li><strong>Retención:</strong> Sistema de gamificación por asistencia constante.</li>
+                        <li><strong>Hardware:</strong> Integrar lectores biométricos (huella o QR) vinculados a la App.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
     </main>
 
 <section id="golden-quote-hidden" class="card quote-card" >
