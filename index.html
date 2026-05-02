@@ -57,7 +57,7 @@
             class="flow-description">Se eliminó la transcripción manual de datos y la espera en recepción, reduciendo el tiempo de check-in en un 95% mediante la implementación de acceso por QR y registro automatizado</p>
     </div>
 
-    <!-- Contenido dentro del Modal -->
+    <!-- Flow Analysis -->
     <div class="card-details" style="text-align: center;">
         <p class="flow-description" data-es="Flujo de tareas"    data-en="Task Flow">Task Flow</p>
         <div class="modal-flow-container">
@@ -160,75 +160,90 @@
     </div>
         </section>
 
-        <!-- ============================================= -->
-<!-- TARJETA USER PERSONA (MODIFICADA)             -->
-<!-- ============================================= -->
-<section class="card persona-card" onclick="expandCard(this)">
-    <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
-    
-    <!-- PARTE 1: Vista previa en el Dashboard (Grid) -->
-    <div class="card-preview">
-        <div class="persona-preview-header">
-            <span class="tag-accent">Research</span>
-            <h3>User Personas</h3>
-        </div>
+     <!-- User Personas -->
+    <section class="card persona-card" onclick="expandCard(this)">
+        <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
         
-        <!-- Diseño de vista previa: dos avatares y nombres -->
-        <div class="persona-ghost-container">
-            <div class="ghost-profile">
-                <div class="ghost-avatar">
-                    <!-- Puedes poner una mini imagen aquí o dejar el estilo CSS -->
-                    <img src="img/paginaprincipal.png" alt="Avatar 1">
-                </div>
-                <div class="ghost-info">
-                    <div class="ghost-name">Atleta Enfocado</div>
-                    <div class="ghost-tag">Primary</div>
-                </div>
-            </div>
-            <div class="ghost-profile">
-                <div class="ghost-avatar">
-                    <!-- Puedes poner una mini imagen aquí o dejar el estilo CSS -->
-                    <img src="img/paginaprincipal.png" alt="Avatar 1">
-                </div>
-                <div class="ghost-info">
-                    <div class="ghost-name">Atleta Enfocado</div>
-                    <div class="ghost-tag">Primary</div>
-                </div>
-            </div>
-        </div>
-        <p class="persona-description">Perfiles detallados basados en entrevistas a usuarios reales.</p>
-    </div>
-
-    <!-- PARTE 2: Contenido dentro del Modal (Al expandir) -->
-    <div class="card-details">
-        <div class="modal-persona-container">
-            
-            <!-- Persona 1 -->
-            <div class="persona-block">
-                <h4><span class="status-dot green"></span> Persona Primaria: El Atleta Enfocado</h4>
-                <div class="persona-image-wrapper">
-                    <!-- CAMBIA ESTA RUTA POR TU PRIMERA IMAGEN -->
-                    <img src="img/paginaprincipal.png" alt="User Persona 1 Detalle" class="full-persona-img">
-                </div>
-                <p class="caption">Representa a usuarios experimentados que buscan eficiencia y seguimiento de datos.</p>
-            </div>
-
-            <!-- Divisor opcional (se oculta en móvil con CSS) -->
-            <div class="persona-divider"></div>
-
-            <!-- Persona 2 -->
-            <div class="persona-block">
-                <h4><span class="status-dot green"></span> Persona Secundaria: El Principiante</h4>
-                <div class="persona-image-wrapper">
-                    <!-- CAMBIA ESTA RUTA POR TU SEGUNDA IMAGEN -->
-                    <img src="img/paginaprincipal.png" alt="User Persona 2 Detalle" class="full-persona-img">
-                </div>
-                <p class="caption">Representa a nuevos miembros que necesitan guía, motivación y facilidad de uso.</p>
+        <!-- PARTE 1: Vista previa en el Dashboard (Grid) -->
+        <div class="card-preview">
+            <div >
+                <span class="tag-accent" data-es="Investigación" data-en="Research">Research</span>
+                <h3>User Persona</h3>
             </div>
             
+            <!-- Diseño de vista previa: dos avatares y nombres -->
+            <div class="persona-ghost-container">
+                <div class="ghost-profile">
+                    <div class="ghost-avatar">
+                        <!-- Puedes poner una mini imagen aquí o dejar el estilo CSS -->
+                        <img src="img/userPersona/Member.png" alt="Member">
+                    </div>
+                    <div class="ghost-info">
+                        <div class="ghost-name" data-es="Socio del Gimnasio" data-en="Gym Member">Gym Member</div>
+                        <div class="ghost-tag" data-es="Usuario Final" data-en="End User">End User</div>
+                    </div>
+                </div>
+                <div class="ghost-profile">
+                    <div class="ghost-avatar">
+                        <!-- Puedes poner una mini imagen aquí o dejar el estilo CSS -->
+                        <img src="img/userPersona/Staff.png" alt="Staff">
+                    </div>
+                    <div class="ghost-info">
+                        <div class="ghost-name" data-es="Personal del Gimnasio" data-en="Gym Staff">Gym Staff</div>
+                        <div class="ghost-tag" data-es="Proveedor de Servicio" data-en="Service Provider">Service Provider</div>
+                    </div>
+                </div>
+            </div>
+            <p class="persona-description"
+            data-es="Modelos de usuario fundamentados en datos recolectados durante la fase de investigación para guiar decisiones de diseño centradas en necesidades reales." 
+            data-en="User models grounded in data collected during the research phase to guide design decisions centered on real-world needs.">
+            User models grounded in data collected during the research phase to guide design decisions centered on real-world needs.</p>
         </div>
-    </div>
-</section>
+
+        <!-- PARTE 2: Contenido dentro del Modal (Al expandir) -->
+        <div class="card-details">
+            <div class="modal-persona-container">
+                
+                <!-- Persona 1 -->
+                <div class="persona-block">
+                    <h4><span class="status-dot green"></span> <span data-es="User Persona - Socio del Gimnasio" data-en="User Persona - Gym Member">User Persona - Gym Member</span></h4>
+                    <div class="persona-image-wrapper">
+                        <!-- CAMBIA ESTA RUTA POR TU PRIMERA IMAGEN -->
+                         <img src="img/userPersona/userPersona-Member-EN.PNG" 
+                        data-img-es="img/userPersona/userPersona-Member-ES.PNG" 
+                        data-img-en="img/userPersona/userPersona-Member-EN.PNG" 
+                        alt="User Persona Member" 
+                        class="full-persona-img">
+                    </div>
+                    <p class="caption"
+                    data-es="Perfil detallado de un usuario final que valora la eficiencia y la tecnología. Luis representa al cliente que busca eliminar la fricción administrativa mediante soluciones digitales como el registro por QR, permitiéndole centrarse en sus metas de salud y bienestar sin procesos manuales lentos." 
+                    data-en="Comprehensive end-user profile focusing on efficiency and technology adoption. Luis represents the member archetype seeking to eliminate administrative friction through digital solutions like QR check-ins, allowing him to focus on his fitness goals without the burden of slow, manual processes.">
+                    Comprehensive end-user profile focusing on efficiency and technology adoption. Luis represents the member archetype seeking to eliminate administrative friction through digital solutions like QR check-ins, allowing him to focus on his fitness goals without the burden of slow, manual processes.</p>
+                </div>
+
+                <!-- Divisor opcional (se oculta en móvil con CSS) -->
+                <div class="persona-divider"></div>
+
+                <!-- Persona 2 -->
+                <div class="persona-block">
+                    <h4><span class="status-dot green"></span> <span data-es="User Persona - Personal del Gimnasio" data-en="User Persona - Gym Staff">User Persona - Gym Staff</span></h4>
+                    <div class="persona-image-wrapper">
+                        <!-- CAMBIA ESTA RUTA POR TU PRIMERA IMAGEN -->
+                         <img src="img/userPersona/userPersona-Staff-EN.PNG" 
+                        data-img-es="img/userPersona/userPersona-Staff-ES.PNG" 
+                        data-img-en="img/userPersona/userPersona-Staff-EN.PNG" 
+                        alt="User Persona Staff" 
+                        class="full-persona-img">
+                    </div>
+                    <p class="caption"
+                    data-es="Perfil del usuario interno (Staff) que desempeña roles duales como recepcionista y entrenadora. Perla representa la necesidad de automatizar tareas administrativas redundantes, como la doble entrada de datos, para liberar tiempo que pueda invertir en la atención directa y el entrenamiento de los socios." 
+                    data-en="Internal user profile (Staff) showcasing the dual role of receptionist and trainer. Perla represents the critical need to automate redundant administrative tasks, such as double data entry, to reclaim time for direct member support and fitness coaching.">
+                    Internal user profile (Staff) showcasing the dual role of receptionist and trainer. Perla represents the critical need to automate redundant administrative tasks, such as double data entry, to reclaim time for direct member support and fitness coaching.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
 
 
         

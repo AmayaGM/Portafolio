@@ -590,9 +590,6 @@ body {
     justify-content: space-between;
 }
 
-.persona-preview-header {
-    margin-bottom: 15px;
-}
 
 /* Contenedor de los perfiles "fantasma" */
 .persona-ghost-container {
