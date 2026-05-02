@@ -354,71 +354,76 @@
         <!-- ============================================= -->
 <!-- TARJETA DESIGN SYSTEM (MODIFICADA)            -->
 <!-- ============================================= -->
-<section class="card ds-card" onclick="expandCard(this)">
-    <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
-    
-    <!-- PARTE 1: Vista previa (Identidad Visual) -->
-    <div class="card-preview">
-        <div class="ds-header">
-            <span class="tag-accent">Atomic Design</span>
-            <h3>Design System</h3>
-        </div>
-        
-        <div class="ds-visual-preview">
-            <!-- Muestra de Colores (Basado en tu imagen de Primary/Secondary) -->
-            <div class="color-palette-mini">
-                <span class="color-circle" style="background:#fad402"></span>
-                <span class="color-circle" style="background:#c8aa02"></span>
-                <span class="color-circle" style="background:#1a1a2e"></span>
-            </div>
-            <!-- Muestra de Tipografía (Basado en Lato) -->
-            <div class="font-preview">
-                <span class="font-lato">Lato Family</span>
-                <span class="font-spec">H1, H2, p, small</span>
-            </div>
-        </div>
-        <p class="ds-description">Guía de estilos, componentes interactivos y sistema de rejillas.</p>
-    </div>
-
-    <!-- PARTE 2: Contenido del Modal (Documentación Completa) -->
-    <div class="card-details">
-        <div class="modal-ds-container">
+        <section class="card ds-card" onclick="expandCard(this)">
+            <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
             
-            <!-- Bloque 1: Tipografía y Rejilla -->
-            <div class="ds-block">
-                <h4><span class="status-dot green"></span> Typography & Grid System</h4>
-                <div class="ds-image-grid">
-                    <img src="img/typography-desktop.png" alt="Tipografía Desktop">
-                    <img src="img/grid-system.png" alt="Sistema de Rejillas">
+            <!-- PARTE 1: Vista previa (Identidad Visual) -->
+            <div class="card-preview">
+                <div class="ds-header">
+                    <span class="tag-accent">Atomic Design</span>
+                    <h3 data-es="Sistema de Diseño" 
+                data-en="Design System">Design System</h3>
                 </div>
-                <p class="caption">Escalado tipográfico para desktop/mobile y sistema de 12 columnas.</p>
+                
+                <div class="ds-visual-preview">
+                    <!-- Muestra de Colores (Basado en tu imagen de Primary/Secondary) -->
+                    <div class="color-palette-mini">
+                        <span class="color-circle" style="background:#fad402"></span>
+                        <span class="color-circle" style="background:#c8aa02"></span>
+                        <span class="color-circle" style="background:#1a1a2e"></span>
+                    </div>
+                    <!-- Muestra de Tipografía (Basado en Lato) -->
+                    <div class="font-preview">
+                        <span class="font-lato" data-es="Familia Lato" 
+                        data-en="Lato Family">Lato Family</span>
+                        <span class="font-spec">H1, H2, p, small</span>
+                    </div>
+                </div>
+                <p class="ds-description"
+                data-es="Documentación de estilos y componentes reutilizables bajo una arquitectura modular para una interfaz cohesiva y escalable." 
+                data-en="Documentation of styles and reusable components under a modular architecture for a cohesive and scalable interface.">
+                Documentation of styles and reusable components under a modular architecture for a cohesive and scalable interface.</p>
             </div>
 
-            <div class="persona-divider-horizontal"></div>
+            <!-- PARTE 2: Contenido del Modal (Documentación Completa) -->
+            <div class="card-details">
+                <div class="modal-ds-container">
+                    
+                    <!-- Bloque 1: Tipografía y Rejilla -->
+                    <div class="ds-block">
+                        <h4><span class="status-dot green"></span> Typography & Grid System</h4>
+                        <div class="ds-image-grid">
+                            <img src="img/typography-desktop.png" alt="Tipografía Desktop">
+                            <img src="img/grid-system.png" alt="Sistema de Rejillas">
+                        </div>
+                        <p class="caption">Escalado tipográfico para desktop/mobile y sistema de 12 columnas.</p>
+                    </div>
 
-            <!-- Bloque 2: Componentes Atómicos (Botones e Iconos) -->
-            <div class="ds-block">
-                <h4><span class="status-dot green"></span> UI Components (Buttons & Icons)</h4>
-                <div class="ds-image-wrapper">
-                    <img src="img/buttons-states.png" alt="Estados de Botones">
+                    <div class="persona-divider-horizontal"></div>
+
+                    <!-- Bloque 2: Componentes Atómicos (Botones e Iconos) -->
+                    <div class="ds-block">
+                        <h4><span class="status-dot green"></span> UI Components (Buttons & Icons)</h4>
+                        <div class="ds-image-wrapper">
+                            <img src="img/buttons-states.png" alt="Estados de Botones">
+                        </div>
+                        <p class="caption">Variaciones de tamaño (Small, Normal, Big) y estados (Hover, Active, Disabled).</p>
+                    </div>
+
+                    <div class="persona-divider-horizontal"></div>
+
+                    <!-- Bloque 3: Organismos y Secciones Complejas -->
+                    <div class="ds-block">
+                        <h4><span class="status-dot green"></span> Sections & Complex Modules</h4>
+                        <div class="ds-image-wrapper">
+                            <img src="img/sections-modules.png" alt="Módulos de la App">
+                        </div>
+                        <p class="caption">Estructura de Header, Footer, Mapas y Gráficos de rendimiento.</p>
+                    </div>
+                    
                 </div>
-                <p class="caption">Variaciones de tamaño (Small, Normal, Big) y estados (Hover, Active, Disabled).</p>
             </div>
-
-            <div class="persona-divider-horizontal"></div>
-
-            <!-- Bloque 3: Organismos y Secciones Complejas -->
-            <div class="ds-block">
-                <h4><span class="status-dot green"></span> Sections & Complex Modules</h4>
-                <div class="ds-image-wrapper">
-                    <img src="img/sections-modules.png" alt="Módulos de la App">
-                </div>
-                <p class="caption">Estructura de Header, Footer, Mapas y Gráficos de rendimiento.</p>
-            </div>
-            
-        </div>
-    </div>
-</section>
+        </section>
 
         <!-- ============================================= -->
 <!-- TARJETA PROTOTYPE (REEMPLAZA USER FLOW)       -->
