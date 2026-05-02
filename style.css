@@ -364,7 +364,7 @@ body {
     box-sizing: border-box;
 }
 .card.active .comparison-preview {
-    max-width: 400px; /* Ajusta este ancho a tu gusto */
+    flex-grow: 1; /* Permite que ocupen el espacio disponible */
     margin: 20px 0;   /* Mantiene el margen arriba/abajo pero no lo centra */
 }
 
@@ -425,6 +425,7 @@ body {
 }
 
 .comparison-preview {
+    flex-grow: 1; /* Permite que ocupen el espacio disponible */
     display: flex;
     align-items: center;
     justify-content: space-around;
