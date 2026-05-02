@@ -47,24 +47,32 @@ document.addEventListener('keydown', (e) => {
 function setLanguage(lang) {
     // 1. Cambiar estado visual de los botones
     document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-    document.getElementById(`btn-${lang}`).classList.add('active');
+    const activeBtn = document.getElementById(`btn-${lang}`);
+    if (activeBtn) activeBtn.classList.add('active');
 
-    // 2. Cambiar todos los textos con atributos data-en/data-es
-    const elements = document.querySelectorAll('[data-en]');
-    
-    elements.forEach(el => {
-        // Cambiar Texto
-        if (el.tagName !== 'IMG') {
-            el.textContent = el.getAttribute(`data-${lang}`);
-        } 
-        // Cambiar Imágenes (si tienen el atributo definido)
-        else {
-            const newSrc = el.getAttribute(`data-${lang}`);
-            if (newSrc) el.src = newSrc;
-        }
+    // 2. Cambiar TEXTOS
+    // Buscamos elementos que tengan data-es o data-en y NO sean imágenes/iframes
+    const textElements = document.querySelectorAll('[data-es]:not(img):not(iframe)');
+    textElements.forEach(el => {
+        el.textContent = el.getAttribute(`data-${lang}`);
     });
 
-    // Opcional: Guardar preferencia en el navegador
+    // 3. Cambiar IMÁGENES
+    // Usamos data-img-es y data-img-en para mayor claridad
+    const images = document.querySelectorAll('img[data-img-es]');
+    images.forEach(img => {
+        const newSrc = img.getAttribute(`data-img-${lang}`);
+        if (newSrc) img.src = newSrc;
+    });
+
+    // 4. Cambiar PROTOTIPOS (Iframes de Figma)
+    const iframes = document.querySelectorAll('iframe[data-src-es]');
+    iframes.forEach(frame => {
+        const newSrc = frame.getAttribute(`data-src-${lang}`);
+        if (newSrc) frame.src = newSrc;
+    });
+
+    // Guardar preferencia
     localStorage.setItem('preferredLang', lang);
 }
 

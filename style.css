@@ -113,7 +113,7 @@ body {
 .card h4 {
     font-size: 1rem;
     font-weight: 600;
-    color: var(--accent); /* Color uniforme para subtítulos */
+    color: var(--bg-color); /* Color uniforme para subtítulos */
     display: flex;
     align-items: center;
     gap: 10px;
@@ -151,10 +151,9 @@ body {
     transform: translate(-50%, -50%);
     width: 95%;
     max-width: 1000px;
-    height: 80vh; /* Altura máxima del 80% de la pantalla */
+    height: 90vh; /* Altura máxima del 80% de la pantalla */
     z-index: 1000;
     cursor: default;
-    padding: 0 !important;
     
     /* CAMBIO CLAVE: Permite el scroll si el contenido es largo */
     overflow-y: auto; 
@@ -463,8 +462,10 @@ body {
 .modal-flow-container {
     display: flex;
     flex-direction: column; 
-    gap: 60px; /* Espacio generoso entre el bloque 1, 2 y 3 */
+    gap: 60px;
     width: 100%;
+    box-sizing: border-box; /* Asegura que el padding no rompa el ancho */
+    padding: 10px; /* Margen de seguridad extra */
 }
 
 .vertical-arrow {
@@ -508,7 +509,6 @@ body {
 
 .flow-image-container {
     background: #2a2a45; /* Fondo oscuro para que resalten tus capturas */
-    padding: 15px;
     border-radius: 12px;
     box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
     margin-top: 10px;
@@ -1175,3 +1175,4 @@ body {
 .lang-btn:hover:not(.active) {
     background: #2a2a4e;
 }
+
