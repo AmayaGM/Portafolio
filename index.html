@@ -298,8 +298,6 @@
                         </div>
                     </div>
 
-                    <div class="persona-divider-horizontal"></div>
-
                     <!-- User Story 2 -->
                     <div class="story-block">
                         <h4><span class="status-dot green"></span> 
@@ -314,8 +312,6 @@
                         </div>
                     </div>
 
-                    <div class="persona-divider-horizontal"></div>
-                    
                     <!-- User Story 3 -->
                     <div class="story-block">
                         <h4><span class="status-dot green"></span> 
@@ -329,8 +325,6 @@
                             alt="User Story 3" class="full-story-img">
                         </div>
                     </div>
-
-                    <div class="persona-divider-horizontal"></div>
                     
                     <!-- User Story 4 -->
                     <div class="story-block">
@@ -346,7 +340,6 @@
                         </div>
                     </div>
 
-                    <div class="persona-divider-horizontal"></div>
                 </div>
             </div>
         </section>
@@ -475,126 +468,122 @@
             </div>
         </section>
 
-        <!-- ============================================= -->
-<!-- TARJETA PROTOTYPE (REEMPLAZA USER FLOW)       -->
-<!-- ============================================= -->
-<section class="card prototype-card" onclick="expandCard(this)">
-    <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
-    
-    <!-- PARTE 1: Vista previa (Desktop & Mobile) -->
-    <div class="card-preview">
-        <div class="ds-header">
-            <span class="tag-accent">Interactive</span>
-            <h3>High-Fidelity Prototype</h3>
-        </div>
-        
-        <div class="prototype-preview-container">
-            <!-- Representación visual de Desktop -->
-            <div class="preview-device desktop-view">
-                <div class="device-screen">
-                    <img src="img/prototype-desktop-snap.png" alt="Desktop Preview">
-                </div>
-            </div>
-            <!-- Representación visual de Mobile -->
-            <div class="preview-device mobile-view">
-                <div class="device-screen">
-                    <img src="img/prototype-mobile-snap.png" alt="Mobile Preview">
-                </div>
-            </div>
-        </div>
-        <p class="ds-description">Prototipos interactivos vinculados directamente desde Figma.</p>
-    </div>
-
-    <!-- PARTE 2: Contenido del Modal (Figma Embeds) -->
-    <div class="card-details">
-        <div class="modal-prototype-container">
+        <!-- Prototipo -->
+        <section class="card prototype-card" onclick="expandCard(this)">
+            <button class="close-btn" onclick="closeCard(event, this)">&times;</button>
             
-    <!-- Bloque Desktop -->
-    <div class="proto-block desktop-proto">
-        <h4>Desktop Experience</h4>
-        <div class="iframe-wrapper">
-            <iframe src="https://embed.figma.com/proto/ivTYbFZ55NKG0lSTbBZyms/Design-System-de-Essentia-Verde--Community-?node-id=88-373&p=f&scaling=scale-down-width&content-scaling=fixed&page-id=88%3A372&embed-host=share" allowfullscreen></iframe>
-        </div>
-    </div>
-
-    <!-- Bloque Mobile -->
-    <div class="proto-block mobile-proto">
-    <h4>Mobile App</h4>
-    <div class="iframe-wrapper">
-        <!-- Se cambió 'scaling=scale-down' por 'scaling=scale-down-width' y se añadió 'hide-footer=1' -->
-        <iframe 
-            src="https://embed.figma.com/proto/ivTYbFZ55NKG0lSTbBZyms/Design-System-de-Essentia-Verde--Community-?node-id=98-5051&p=f&scaling=scale-down-width&content-scaling=fixed&page-id=98%3A5050&starting-point-node-id=98%3A5051&embed-host=share&hide-footer=1" 
-            allowfullscreen>
-        </iframe>
-    </div>
-</div>
-            
-</div>
-    </div>
-</section>
-
-<!-- ============================================= -->
-<!-- TARJETA RESULTS & METRICS (FULL WIDTH)        -->
-<!-- ============================================= -->
-<section class="card results-card full-wide" onclick="expandCard(this)">
-    <button class="close-btn" onclick="closeCard(event, this)" aria-label="Cerrar detalle">&times;</button>
-    
-    <!-- PARTE 1: Vista previa en el Dashboard -->
-    <div class="card-preview results-preview-layout">
-        <!-- Lado Izquierdo: SUS Score -->
-        <div class="sus-container">
-            <span class="tag-accent">Validation</span>
-            <div class="sus-circle-result">
-                <span class="sus-value">85%</span>
-                <span class="sus-label">SUS Score</span>
-            </div>
-        </div>
-
-        <!-- Lado Derecho: Objetivos y Sugerencias -->
-        <div class="summary-details">
-            <div class="summary-box goals-box">
-                <h4><span class="status-dot green"></span> Objetivos Cumplidos</h4>
-                <p>Digitalización del 100% de registros y reducción de tiempos de espera.</p>
-            </div>
-            <div class="summary-box suggestions-box">
-                <h4><span class="status-dot green"></span> Sugerencias</h4>
-                <p>Implementar módulos de nutrición y pagos recurrentes automáticos.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- PARTE 2: Contenido dentro del Modal (Detallado) -->
-    <div class="card-details">
-        <div class="modal-results-detailed">
-            <div class="results-header-detailed">
-                <h3>System Usability Scale (SUS) Analysis</h3>
-                <p>El prototipo obtuvo una calificación de <strong>85/100</strong>, situándose en el rango de "Excelente".</p>
-            </div>
-            
-            <div class="detailed-grid">
-                <!-- Columna Objetivos -->
-                <div class="detailed-section">
-                    <h4>Objetivos de Negocio Logrados</h4>
-                    <ul class="check-list">
-                        <li><strong>Eficiencia Operativa:</strong> Reducción del tiempo de registro manual (de 100s a menos de 20s).</li>
-                        <li><strong>Cero Papelería:</strong> Digitalización total de vouchers y contratos.</li>
-                        <li><strong>Control de Aforo:</strong> Monitoreo en tiempo real de usuarios en el gimnasio.</li>
-                    </ul>
+            <!-- PARTE 1: Vista previa (Desktop & Mobile) -->
+            <div class="card-preview">
+                <div class="ds-header">
+                    <span class="tag-accent">Interactive</span>
+                    <h3>High-Fidelity Prototype</h3>
                 </div>
+                
+                <div class="prototype-preview-container">
+                    <!-- Representación visual de Desktop -->
+                    <div class="preview-device desktop-view">
+                        <div class="device-screen">
+                            <img src="img/prototype-desktop-snap.png" alt="Desktop Preview">
+                        </div>
+                    </div>
+                    <!-- Representación visual de Mobile -->
+                    <div class="preview-device mobile-view">
+                        <div class="device-screen">
+                            <img src="img/prototype-mobile-snap.png" alt="Mobile Preview">
+                        </div>
+                    </div>
+                </div>
+                <p class="ds-description">Prototipos interactivos vinculados directamente desde Figma.</p>
+            </div>
 
-                <!-- Columna Sugerencias -->
-                <div class="detailed-section">
-                    <h4>Sugerencias Estratégicas</h4>
-                    <ul class="check-list">
-                        <li><strong>Escalabilidad:</strong> Integrar una API de pasarela de pagos para cobros automáticos.</li>
-                        <li><strong>Retención:</strong> Sistema de gamificación por asistencia constante.</li>
-                        <li><strong>Hardware:</strong> Integrar lectores biométricos (huella o QR) vinculados a la App.</li>
-                    </ul>
+            <!-- PARTE 2: Contenido del Modal (Figma Embeds) -->
+            <div class="card-details">
+                <div class="modal-prototype-container">
+                    
+            <!-- Bloque Desktop -->
+            <div class="proto-block desktop-proto">
+                <h4>Desktop Experience</h4>
+                <div class="iframe-wrapper">
+                    <iframe src="https://embed.figma.com/proto/ivTYbFZ55NKG0lSTbBZyms/Design-System-de-Essentia-Verde--Community-?node-id=88-373&p=f&scaling=scale-down-width&content-scaling=fixed&page-id=88%3A372&embed-host=share" allowfullscreen></iframe>
                 </div>
             </div>
+
+            <!-- Bloque Mobile -->
+            <div class="proto-block mobile-proto">
+            <h4>Mobile App</h4>
+            <div class="iframe-wrapper">
+                <!-- Se cambió 'scaling=scale-down' por 'scaling=scale-down-width' y se añadió 'hide-footer=1' -->
+                <iframe 
+                    src="https://embed.figma.com/proto/ivTYbFZ55NKG0lSTbBZyms/Design-System-de-Essentia-Verde--Community-?node-id=98-5051&p=f&scaling=scale-down-width&content-scaling=fixed&page-id=98%3A5050&starting-point-node-id=98%3A5051&embed-host=share&hide-footer=1" 
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
-    </div>
-</section>
+                    
+        </div>
+            </div>
+        </section>
+
+        <!-- Resultados -->
+        <section class="card results-card full-wide" onclick="expandCard(this)">
+            <button class="close-btn" onclick="closeCard(event, this)" aria-label="Cerrar detalle">&times;</button>
+            
+            <!-- PARTE 1: Vista previa en el Dashboard -->
+            <div class="card-preview results-preview-layout">
+                <!-- Lado Izquierdo: SUS Score -->
+                <div class="sus-container">
+                    <span class="tag-accent">Validation</span>
+                    <div class="sus-circle-result">
+                        <span class="sus-value">85%</span>
+                        <span class="sus-label">SUS Score</span>
+                    </div>
+                </div>
+
+                <!-- Lado Derecho: Objetivos y Sugerencias -->
+                <div class="summary-details">
+                    <div class="summary-box goals-box">
+                        <h4><span class="status-dot green"></span> Objetivos Cumplidos</h4>
+                        <p>Digitalización del 100% de registros y reducción de tiempos de espera.</p>
+                    </div>
+                    <div class="summary-box suggestions-box">
+                        <h4><span class="status-dot green"></span> Sugerencias</h4>
+                        <p>Implementar módulos de nutrición y pagos recurrentes automáticos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PARTE 2: Contenido dentro del Modal (Detallado) -->
+            <div class="card-details">
+                <div class="modal-results-detailed">
+                    <div class="results-header-detailed">
+                        <h3>System Usability Scale (SUS) Analysis</h3>
+                        <p>El prototipo obtuvo una calificación de <strong>85/100</strong>, situándose en el rango de "Excelente".</p>
+                    </div>
+                    
+                    <div class="detailed-grid">
+                        <!-- Columna Objetivos -->
+                        <div class="detailed-section">
+                            <h4>Objetivos de Negocio Logrados</h4>
+                            <ul class="check-list">
+                                <li><strong>Eficiencia Operativa:</strong> Reducción del tiempo de registro manual (de 100s a menos de 20s).</li>
+                                <li><strong>Cero Papelería:</strong> Digitalización total de vouchers y contratos.</li>
+                                <li><strong>Control de Aforo:</strong> Monitoreo en tiempo real de usuarios en el gimnasio.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Columna Sugerencias -->
+                        <div class="detailed-section">
+                            <h4>Sugerencias Estratégicas</h4>
+                            <ul class="check-list">
+                                <li><strong>Escalabilidad:</strong> Integrar una API de pasarela de pagos para cobros automáticos.</li>
+                                <li><strong>Retención:</strong> Sistema de gamificación por asistencia constante.</li>
+                                <li><strong>Hardware:</strong> Integrar lectores biométricos (huella o QR) vinculados a la App.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
 

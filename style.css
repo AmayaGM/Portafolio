@@ -865,6 +865,13 @@ body {
         align-items: start; /* Alinea los bloques arriba si tienen alturas distintas */
     }
 
+    .modal-stories-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+        gap: 40px;
+        align-items: start; /* Alinea los bloques arriba si tienen alturas distintas */
+    }
+
     /* Si quieres que algún bloque (como el de colores) ocupe todo el ancho, 
        puedes usar esta clase opcional: */
     .ds-block-full {
