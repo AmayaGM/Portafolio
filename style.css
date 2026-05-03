@@ -834,6 +834,7 @@ body {
     flex-direction: column;
     gap: 40px;
     align-items: center;
+    width: 100%;
 }
 
 .ds-image-grid {
@@ -854,6 +855,21 @@ body {
     width: 100%;
     height: auto;
     border-radius: 6px;
+}
+
+@media (min-width: 1000px) {
+    .modal-ds-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+        gap: 40px;
+        align-items: start; /* Alinea los bloques arriba si tienen alturas distintas */
+    }
+
+    /* Si quieres que algún bloque (como el de colores) ocupe todo el ancho, 
+       puedes usar esta clase opcional: */
+    .ds-block-full {
+        grid-column: span 2;
+    }
 }
 
 @media (max-width: 768px) {
