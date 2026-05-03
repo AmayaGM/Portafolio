@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualizador de CV</title>
+    <style>
+        /* Eliminamos margenes y forzamos altura total */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Evita doble scroll */
+        }
+
+        embed {
+            width: 100%;
+            height: 100vh; /* 100% del Viewport Height */
+        }
+    </style>
+</head>
+<body>
+    <embed src="cv_ingles.pdf" type="application/pdf" />
+</body>
+</html>
